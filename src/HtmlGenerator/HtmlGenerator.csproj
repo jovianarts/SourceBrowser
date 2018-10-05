@@ -1223,6 +1223,14 @@
       <Link>Web\content\icons\xaml.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="..\SourceIndexServer\content\icons\xml.png">
+      <Link>Web\content\icons\xml.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\SourceIndexServer\content\icons\resx.png">
+      <Link>Web\content\icons\resx.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="..\SourceIndexServer\documentoutline.html">
       <Link>Web\documentoutline.html</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

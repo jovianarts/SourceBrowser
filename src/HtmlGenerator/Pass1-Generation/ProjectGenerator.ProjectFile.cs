@@ -45,6 +45,10 @@ namespace Microsoft.SourceBrowser.HtmlGenerator
 
                 GenerateXamlFiles(msbuildProject);
 
+                GenerateXmlFiles(msbuildProject);
+
+                GenerateResxFiles(msbuildProject);
+
                 GenerateTypeScriptFiles(msbuildProject);
 
                 OtherFiles.Add(title);
@@ -95,6 +99,26 @@ namespace Microsoft.SourceBrowser.HtmlGenerator
             {
                 var xamlFile = xamlItem.EvaluatedInclude;
                 GenerateXamlFile(xamlFile);
+            }
+        }
+
+        private void GenerateXmlFiles(Project msbuildProject)
+        {
+            var xmlItems = msbuildProject.GetItems("Resource").Concat(msbuildProject.GetItems("ApplicationDefinition"));
+            foreach (var xmlItem in xmlItems)
+            {
+                var xmlFile = xmlItem.EvaluatedInclude;
+                GenerateXamlFile(xmlFile);
+            }
+        }
+
+        private void GenerateResxFiles(Project msbuildProject)
+        {
+            var resxItems = msbuildProject.GetItems("EmbeddedResource").Concat(msbuildProject.GetItems("ApplicationDefinition"));
+            foreach (var resxItem in resxItems)
+            {
+                var resxFile = resxItem.EvaluatedInclude;
+                GenerateXamlFile(resxFile);
             }
         }
 

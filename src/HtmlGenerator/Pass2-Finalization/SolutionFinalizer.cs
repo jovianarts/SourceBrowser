@@ -315,10 +315,7 @@ namespace Microsoft.SourceBrowser.HtmlGenerator
             FileUtilities.CopyDirectory(sourcePath, destinationFolder);
 
             StampOverviewHtmlWithDate(destinationFolder);
-            if (emitAssemblyList)
-            {
-                ToggleSolutionExplorerOff(destinationFolder);
-            }
+            ToggleSolutionExplorerOff(destinationFolder);
 
             SetExternalUrlMap(destinationFolder, federation);
 

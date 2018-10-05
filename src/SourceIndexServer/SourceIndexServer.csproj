@@ -339,11 +339,13 @@
     <Content Include="content\icons\minus.png" />
     <Content Include="content\icons\namespaceexplorer.png" />
     <Content Include="content\icons\plus.png" />
+    <Content Include="content\icons\resx.png" />
     <Content Include="content\icons\searchmagnifyingglass.png" />
     <Content Include="content\icons\typescript.png" />
     <Content Include="content\icons\vb.png" />
     <Content Include="content\icons\vbprojectexplorer.png" />
     <Content Include="content\icons\xaml.png" />
+    <Content Include="content\icons\xml.png" />
     <Content Include="documentoutline.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />

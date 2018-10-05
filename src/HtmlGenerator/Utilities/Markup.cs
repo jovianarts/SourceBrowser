@@ -300,7 +300,7 @@ Don't use this page directly, pass #symbolId to get redirected.
             var sb = new StringBuilder();
 
             sb.AppendLine(GetResultsHtmlPrefix());
-            sb.AppendLine(GetResultsHtmlSuffix(emitSolutionBrowserLink: false));
+            sb.AppendLine(GetResultsHtmlSuffix(emitSolutionBrowserLink: true));
 
             File.WriteAllText(Path.Combine(solutionDestinationFolder, "results.html"), sb.ToString());
         }
@@ -341,7 +341,7 @@ Enter a type or member name or <a href=""/#q=assembly%20"" target=""_top"" class
         public static string GetResultsHtmlSuffix(bool emitSolutionBrowserLink)
         {
             var solutionExplorerLink = emitSolutionBrowserLink
-                ? @"<div class=""note"">Try also browsing the <a href=""solutionexplorer.html"" class=""blueLink"">solution explorer</a>.</div>"
+                ? @"<div class=""note"">Try also browsing the <a href=""solutionexplorer.html"" class=""blueLink"">solution explorer</a> (may take a while to load).</div>"
                 : null;
 
             return @"</div></div>" + solutionExplorerLink + @"</body></html>";
